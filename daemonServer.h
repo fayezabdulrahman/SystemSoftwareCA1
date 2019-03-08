@@ -6,5 +6,6 @@ void RunDaemonServer();
 int BackUp();
 bool LockFile();
 void UnLockFile();
+void LockIt();
 
 #endif // Ending DAEMONSERVER_H_

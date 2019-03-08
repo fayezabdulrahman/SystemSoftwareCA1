@@ -6,10 +6,11 @@
 #include <fcntl.h> // for permissions
 #include <string.h> // for comparing string
 #include <stdbool.h> // for boolean
+#include "daemonServer.h"
 
 //global variable
 char LOCKINGPERMISSION[] = "r--r--r--";
-char LIVE[] = "/home/fayez/CA/test.txt";
+char LIVE[] = "/home/fayez/Desktop/CA1/SystemSoftwareCA1/test.txt";
 
 int BackUp()
 {
@@ -30,19 +31,19 @@ int BackUp()
 
         // Get input from the pipe via read
         nbytes = read(fd[0], readbuffer, sizeof(readbuffer));
-        printf("Message from Child: %s", readbuffer);
+        syslog(LOG_INFO, readbuffer);
+        exit (0);
         
     }
     else
     {
         syslog(LOG_INFO,"Inside Backup Process");
+        //LockIt(); // locking the file before backing up
 
         // Take no input, close fd[0] (READ)
         close(fd[0]);
-        char message[] = "CHild is Processing backup...";
+        char message[] = "Child Processing Backing up...";
         write(fd[1],message, (strlen(message)+1));
-
-        syslog(LOG_INFO,"Copying files over");
         int checker = system("cp -u /var/www/html/intranet.txt /var/www/html/live.txt"); // the -u operator only copies changed content in the file 
         
         if(checker == -1)
@@ -53,14 +54,11 @@ int BackUp()
         {
             return 1;
         }
-        
-
-        exit (0);
     }
     
 
 }
-
+/*
 bool LockFile()
 {
     struct stat st;
@@ -96,11 +94,21 @@ bool LockFile()
         return false;
     }
 }
+*/
+void LockIt()
+{
+    syslog(LOG_INFO, "LOCKING FILE BABBYYYUHHH!");
+    // change file perimissions to read for user, read for group, read for others, no one allowed to write to it
+    //chmod(LIVE,S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
+    system("chmod 444 /home/fayez/Desktop/CA1/SystemSoftwareCA1/test.txt"); // the -u operator only copies changed content in the file 
+
+}
 
 void UnLockFile()
 {
     // change file perimissions to read write execute for user read for group, read for others
-    chmod(LIVE,S_IRWXU|S_IWUSR|S_IRGRP|S_IROTH);
+    //chmod(LIVE,S_IRWXU|S_IWUSR|S_IRGRP|S_IROTH);
+    //system("chmod 444 /home/fayez/Desktop/CA1/SystemSoftwareCA1/test.txt"); // the -u operator only copies changed content in the file 
 }
 /*
 int getChmod(const char *path)

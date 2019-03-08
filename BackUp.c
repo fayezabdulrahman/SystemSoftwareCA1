@@ -36,8 +36,11 @@ int BackUp()
     else
     {
         syslog(LOG_INFO,"Inside Backup Process");
+
         // Take no input, close fd[0] (READ)
         close(fd[0]);
+        char message[] = "CHild is Processing backup...";
+        write(fd[1],message, (strlen(message)+1));
 
         syslog(LOG_INFO,"Copying files over");
         int checker = system("cp -u /var/www/html/intranet.txt /var/www/html/live.txt"); // the -u operator only copies changed content in the file 

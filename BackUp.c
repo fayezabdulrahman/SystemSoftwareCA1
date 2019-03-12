@@ -45,7 +45,7 @@ int BackUp()
         char message[] = "Child Processing Backing up...";
         write(fd[1],message, (strlen(message)+1));
         int checker = system("cp -u /var/www/html/intranet.txt /var/www/html/live.txt"); // the -u operator only copies changed content in the file 
-        
+
         if(checker == -1)
         {
             return -1;

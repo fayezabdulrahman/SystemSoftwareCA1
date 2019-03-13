@@ -10,9 +10,12 @@
 
 //global variable
 char LOCKINGPERMISSION[] = "r--r--r--";
-char LIVE[] = "/home/fayez/Desktop/CA1/SystemSoftwareCA1/test.txt";
+char LIVE[] = "/var/www/html/intranet.html";
 
-int BackUp()
+// define functions
+int actuallyBackingUp();
+int transferFilesToLive();
+void BackUp()
 {
     int result;
     char readbuffer[100];
@@ -32,30 +35,78 @@ int BackUp()
         // Get input from the pipe via read
         nbytes = read(fd[0], readbuffer, sizeof(readbuffer));
         syslog(LOG_INFO, readbuffer);
-        exit (0);
+        //exit (0);
         
     }
     else
     {
         syslog(LOG_INFO,"Inside Backup Process");
-        //LockIt(); // locking the file before backing up
 
         // Take no input, close fd[0] (READ)
         close(fd[0]);
-        char message[] = "Child Processing Backing up...";
-        write(fd[1],message, (strlen(message)+1));
-        int checker = system("cp -u /var/www/html/intranet.txt /var/www/html/live.txt"); // the -u operator only copies changed content in the file 
-
-        if(checker == -1)
+        LockIt(); // locking file before backing up
+        
+        int result = actuallyBackingUp();
+        if(result == -1)
         {
-            return -1;
+            char message[] = "BACKUP FAILED, REFER TO LOG FILE";
+            write(fd[1],message, (strlen(message)+1));
+            UnLockFile();
+            exit(0);
         }
         else
         {
-            return 1;
+            char message[] = "Backup succesfull.. now transfering files to live";
+            write(fd[1],message, (strlen(message)+1));
+
+            int transferResult = transferFilesToLive();
+            if(transferResult == -1)
+            {
+                char message[] = "TRANSFER FAILED, REFER TO LOGS ";
+                write(fd[1],message, (strlen(message)+1));
+                UnLockFile();
+                exit(0);
+            }
+            else
+            {
+                char message[] = "TRANSFER succesfull, unlocking file....";
+                write(fd[1],message, (strlen(message)+1));
+                UnLockFile();
+                exit(0);
+            }
+            
+            
         }
     }
-    
+}
+
+int transferFilesToLive()
+{
+    syslog(LOG_INFO, "INSIDE TRANSFER FILES !!");
+    int checker = system("cp -u /var/www/html/intranet/intranet.txt /var/www/html/live/live.txt"); // the -u operator only copies changed content in the file 
+    if(checker == -1)
+    {
+        return -1;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+int actuallyBackingUp()
+{
+    syslog(LOG_INFO, "INSIDE ACTUALLYBACKINGUP");
+
+    int checker = system("cp -u /var/www/html/intranet/intranet.txt /var/www/backups/intranetBackup.txt"); // the -u operator only copies changed content in the file 
+    if(checker == -1)
+    {
+        return -1;
+    }
+    else
+    {
+        return 1;
+    }
 
 }
 /*
@@ -97,18 +148,19 @@ bool LockFile()
 */
 void LockIt()
 {
-    syslog(LOG_INFO, "LOCKING FILE BABBYYYUHHH!");
+    syslog(LOG_INFO, "LOCKING FILE Before backing up!");
     // change file perimissions to read for user, read for group, read for others, no one allowed to write to it
     //chmod(LIVE,S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
-    system("chmod 444 /home/fayez/Desktop/CA1/SystemSoftwareCA1/test.txt"); // the -u operator only copies changed content in the file 
+    system("chmod 444 /var/www/html/intranet/intranet.txt"); // the -u operator only copies changed content in the file 
 
 }
 
 void UnLockFile()
 {
+    syslog(LOG_INFO, "Unlocking FILE After backing/transfer up!");
     // change file perimissions to read write execute for user read for group, read for others
     //chmod(LIVE,S_IRWXU|S_IWUSR|S_IRGRP|S_IROTH);
-    //system("chmod 444 /home/fayez/Desktop/CA1/SystemSoftwareCA1/test.txt"); // the -u operator only copies changed content in the file 
+    system("chmod 775 /var/www/html/intranet/intranet.txt"); // the -u operator only copies changed content in the file 
 }
 /*
 int getChmod(const char *path)

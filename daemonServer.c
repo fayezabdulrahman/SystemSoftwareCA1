@@ -102,12 +102,15 @@ int main (int argc, char *argv[] )
         
 
         // THis if statement checks if time is midnight, if it is, it will call the BACKUP function which will fork a backup Process and copy files over
-        if(systemHour == 21 && backedUp == false)
+        if(systemHour == 19  && backedUp == false)
         {
-            LockIt();
-            syslog(LOG_INFO,"CAlling BACKUP FUNCTION!");
+            backedUp = true;
+            //LockIt();
+            syslog(LOG_INFO,"Calling BACKUP FUNCTION!");
             // call back up function which will go into BackUp.c and fork a new child to COPY files over.
-            int result = BackUp();
+            //int result = BackUp();
+            BackUp();
+            /*
             if (result == 1)
             {
                 syslog(LOG_INFO,"Successfully backed up website!");
@@ -117,11 +120,9 @@ int main (int argc, char *argv[] )
             else
             {
                 syslog(LOG_INFO,"FAILED to backup website!");
-            }
-            backedUp = true;
-                    
+            }*/   
         } 
-        if(systemHour ==! 19 && backedUp == true)
+        if(systemHour ==! 17 && backedUp == true)
         {
             syslog(LOG_INFO,"I FNISHED BACKING UP!!"); // why doesn't it log ?
             backedUp = false;

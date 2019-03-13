@@ -3,8 +3,7 @@
 #include <stdbool.h> // used for boolean because C99 takes needs this header file
 
 void RunDaemonServer();
-int BackUp();
-bool LockFile();
+void BackUp();
 void UnLockFile();
 void LockIt();
 

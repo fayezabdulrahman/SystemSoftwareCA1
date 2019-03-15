@@ -64,11 +64,11 @@ int main (int argc, char *argv[] )
     // this here checks if ./myprog stop is passed and it kills the daemon running
     if(argc >1)
     {
-        char hello[100];
-        strcpy(hello,argv[1]);
-        if(strcmp(hello,"stop") == 0)
+        char argumentPassed[100];
+        strcpy(argumentPassed,argv[1]);
+        if(strcmp(argumentPassed,"stop") == 0)
         {
-        syslog(LOG_INFO,"Stopping dameon");
+            syslog(LOG_INFO,"Stopping dameon");
 
             int checker = system("killall myprog"); // the -u operator only copies changed content in the file
             if(checker ==! -1)
@@ -99,18 +99,22 @@ int main (int argc, char *argv[] )
         int systemMinute = myTime->tm_min;
 
         
+            
+        
+
+        
         
 
         // THis if statement checks if time is midnight, if it is, it will call the BACKUP function which will fork a backup Process and copy files over
-        if(systemHour == 19  && backedUp == false)
+        if(systemHour == 17  && backedUp == false)
         {
+            
             backedUp = true;
-            //LockIt();
+            //runLogfilesForToday(); NOT WORKING ??
             syslog(LOG_INFO,"Calling BACKUP FUNCTION!");
             // call back up function which will go into BackUp.c and fork a new child to COPY files over.
-            //int result = BackUp();
             BackUp();
-            /*
+            
             if (result == 1)
             {
                 syslog(LOG_INFO,"Successfully backed up website!");
@@ -120,14 +124,16 @@ int main (int argc, char *argv[] )
             else
             {
                 syslog(LOG_INFO,"FAILED to backup website!");
-            }*/   
+            }  
         } 
         if(systemHour ==! 17 && backedUp == true)
         {
-            syslog(LOG_INFO,"I FNISHED BACKING UP!!"); // why doesn't it log ?
             backedUp = false;
+            syslog(LOG_INFO,"I FNISHED BACKING UP!!"); // why doesn't it log ?
             
-        }      
+        }
+
+             
             
     } // Daemon loop!
         

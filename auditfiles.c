@@ -30,7 +30,7 @@ void runLogfilesForToday()
         // Get input from the pipe via read
         nbytes = read(fd[0], readbuffer, sizeof(readbuffer));
         syslog(LOG_INFO, readbuffer);
-        //exit (0);
+        exit (0);
         
     }
     else
@@ -41,9 +41,25 @@ void runLogfilesForToday()
         syslog(LOG_INFO,"Inside AuditLog Process");
         //int returnedResult = runLogs();
         syslog(LOG_INFO,"CALLING CREAT AUDITt");
-        result = system("ausearch -f /var/www/html/intranet/intranet.txt > auditdddlog.txt");
-        syslog(LOG_INFO,"FINISHED CRAETING AUDIT");
+        result = runLogs();
 
-        exit(0);
+        if(result == -1)
+        {
+            char message[] = "Audit file failed to create.... ";
+            write(fd[1],message, (strlen(message)+1));
+        }
+        else
+        {
+            char message[] = "Audit file CREATED, check directory";
+            write(fd[1],message, (strlen(message)+1));
+        }
     }
+}
+
+
+int runLogs()
+{
+    int checker = system("sudo ausearch -f /var/www/html/ > /home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/auditdddlog.txt");
+
+    return checker;
 }

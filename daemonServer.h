@@ -4,7 +4,7 @@
 void RunDaemonServer();
 void BackUp();
 void UnLockFile();
-void LockIt();
+int LockIt();
 void runLogfilesForToday();
 
 #endif // Ending DAEMONSERVER_H_

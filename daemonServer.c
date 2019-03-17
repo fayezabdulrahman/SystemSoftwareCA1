@@ -70,7 +70,7 @@ int main (int argc, char *argv[] )
         {
             syslog(LOG_INFO,"Stopping dameon");
 
-            int checker = system("killall myprog"); // the -u operator only copies changed content in the file
+            int checker = system("sudo killall myprog"); // the -u operator only copies changed content in the file
             if(checker ==! -1)
             {
                 exit(0);
@@ -98,35 +98,19 @@ int main (int argc, char *argv[] )
         int systemHour = myTime->tm_hour;
         int systemMinute = myTime->tm_min;
 
-        
-            
-        
-
-        
-        
 
         // THis if statement checks if time is midnight, if it is, it will call the BACKUP function which will fork a backup Process and copy files over
-        if(systemHour == 17  && backedUp == false)
+        if(systemHour == 18  && backedUp == false)
         {
             
             backedUp = true;
-            //runLogfilesForToday(); NOT WORKING ??
-            syslog(LOG_INFO,"Calling BACKUP FUNCTION!");
-            // call back up function which will go into BackUp.c and fork a new child to COPY files over.
+            syslog(LOG_INFO,"Calling Function to create log files for today..");
+            runLogfilesForToday(); 
+            syslog(LOG_INFO,"Calling function to create backup...");
             BackUp();
             
-            if (result == 1)
-            {
-                syslog(LOG_INFO,"Successfully backed up website!");
-                //unlock file
-
-            }
-            else
-            {
-                syslog(LOG_INFO,"FAILED to backup website!");
-            }  
         } 
-        if(systemHour ==! 17 && backedUp == true)
+        if(systemHour ==! 18 && backedUp == true)
         {
             backedUp = false;
             syslog(LOG_INFO,"I FNISHED BACKING UP!!"); // why doesn't it log ?

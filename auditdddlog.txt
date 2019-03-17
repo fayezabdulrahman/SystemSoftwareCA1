@@ -1,0 +1,369 @@
+----
+time->Sun Mar 17 15:03:59 2019
+type=USER_CMD msg=audit(1552835039.934:88): pid=2426 uid=1000 auid=1000 ses=3 msg='cwd="/var/www/html/intranet" cmd=6E616E6F20696E7472616E65742E747874 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 15:28:30 2019
+type=PROCTITLE msg=audit(1552836510.693:176): proctitle=6370002D75002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874002F7661722F7777772F6261636B7570732F696E7472616E65744261636B75702E747874
+type=PATH msg=audit(1552836510.693:176): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836510.693:176): cwd="/"
+type=SYSCALL msg=audit(1552836510.693:176): arch=c000003e syscall=2 success=yes exit=0 a0=7ffdac4418a2 a1=0 a2=0 a3=69f items=1 ppid=3689 pid=3690 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="cp" exe="/bin/cp" key=(null)
+----
+time->Sun Mar 17 15:28:30 2019
+type=PROCTITLE msg=audit(1552836510.681:175): proctitle=63686D6F6400343434002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874
+type=PATH msg=audit(1552836510.681:175): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836510.681:175): cwd="/"
+type=SYSCALL msg=audit(1552836510.681:175): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=5598acec20f0 a2=124 a3=3c0 items=1 ppid=3685 pid=3686 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 15:28:30 2019
+type=PROCTITLE msg=audit(1552836510.697:177): proctitle=6370002D75002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874002F7661722F7777772F68746D6C2F6C6976652F6C6976652E747874
+type=PATH msg=audit(1552836510.697:177): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836510.697:177): cwd="/"
+type=SYSCALL msg=audit(1552836510.697:177): arch=c000003e syscall=2 success=yes exit=0 a0=7ffdf69218aa a1=0 a2=0 a3=69f items=1 ppid=3691 pid=3692 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="cp" exe="/bin/cp" key=(null)
+----
+time->Sun Mar 17 15:28:30 2019
+type=PROCTITLE msg=audit(1552836510.705:178): proctitle=63686D6F6400373735002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874
+type=PATH msg=audit(1552836510.705:178): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836510.705:178): cwd="/"
+type=SYSCALL msg=audit(1552836510.705:178): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=5624af3380f0 a2=1fd a3=3c0 items=1 ppid=3693 pid=3694 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 15:30:16 2019
+type=PROCTITLE msg=audit(1552836616.478:180): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552836616.478:180): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836616.478:180): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552836616.478:180): arch=c000003e syscall=191 success=no exit=-61 a0=7ffc6c3f6270 a1=55e0571daaf3 a2=0 a3=0 items=1 ppid=3723 pid=3737 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 15:30:16 2019
+type=PROCTITLE msg=audit(1552836616.478:179): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552836616.478:179): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836616.478:179): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552836616.478:179): arch=c000003e syscall=192 success=no exit=-61 a0=7ffc6c3f6270 a1=7f2ab0a1b262 a2=55e05829dbb0 a3=ff items=1 ppid=3723 pid=3737 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 15:30:24 2019
+type=PROCTITLE msg=audit(1552836624.850:182): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552836624.850:182): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836624.850:182): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552836624.850:182): arch=c000003e syscall=191 success=no exit=-61 a0=7ffc3515f0e0 a1=55f5979e5af3 a2=0 a3=0 items=1 ppid=3723 pid=3741 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 15:30:24 2019
+type=PROCTITLE msg=audit(1552836624.850:181): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552836624.850:181): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552836624.850:181): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552836624.850:181): arch=c000003e syscall=192 success=no exit=-61 a0=7ffc3515f0e0 a1=7f6d340fa262 a2=55f5987c9bb0 a3=ff items=1 ppid=3723 pid=3741 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 15:43:29 2019
+type=PROCTITLE msg=audit(1552837409.038:184): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552837409.038:184): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552837409.038:184): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552837409.038:184): arch=c000003e syscall=191 success=no exit=-61 a0=7ffecd9111f0 a1=5655101f7af3 a2=0 a3=0 items=1 ppid=3723 pid=3906 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 15:43:29 2019
+type=PROCTITLE msg=audit(1552837409.038:183): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552837409.038:183): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552837409.038:183): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552837409.038:183): arch=c000003e syscall=192 success=no exit=-61 a0=7ffecd9111f0 a1=7f0f8d410262 a2=56551217ebb0 a3=ff items=1 ppid=3723 pid=3906 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 15:45:10 2019
+type=PROCTITLE msg=audit(1552837510.793:185): proctitle="./myprog"
+type=PATH msg=audit(1552837510.793:185): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552837510.793:185): cwd="/"
+type=SYSCALL msg=audit(1552837510.793:185): arch=c000003e syscall=90 success=no exit=-1 a0=55bceb069308 a1=124 a2=ffffffff a3=252 items=1 ppid=3970 pid=3971 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 15:48:52 2019
+type=PROCTITLE msg=audit(1552837732.864:186): proctitle="./myprog"
+type=PATH msg=audit(1552837732.864:186): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552837732.864:186): cwd="/"
+type=SYSCALL msg=audit(1552837732.864:186): arch=c000003e syscall=90 success=no exit=-1 a0=55decaed2160 a1=124 a2=ffffffff a3=252 items=1 ppid=4062 pid=4063 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 15:49:36 2019
+type=PROCTITLE msg=audit(1552837776.070:187): proctitle="./myprog"
+type=PATH msg=audit(1552837776.070:187): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552837776.070:187): cwd="/"
+type=SYSCALL msg=audit(1552837776.070:187): arch=c000003e syscall=90 success=no exit=-1 a0=55b362f96160 a1=124 a2=ffffffff a3=252 items=1 ppid=4095 pid=4096 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 15:51:23 2019
+type=PROCTITLE msg=audit(1552837883.555:188): proctitle="./myprog"
+type=PATH msg=audit(1552837883.555:188): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552837883.555:188): cwd="/"
+type=SYSCALL msg=audit(1552837883.555:188): arch=c000003e syscall=90 success=no exit=-1 a0=562b61a01160 a1=124 a2=ffffffff a3=252 items=1 ppid=4127 pid=4128 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 15:54:40 2019
+type=PROCTITLE msg=audit(1552838080.054:189): proctitle="./myprog"
+type=PATH msg=audit(1552838080.054:189): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838080.054:189): cwd="/"
+type=SYSCALL msg=audit(1552838080.054:189): arch=c000003e syscall=90 success=no exit=-1 a0=5600be7cf3e8 a1=124 a2=ffffffff a3=252 items=1 ppid=4186 pid=4187 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 15:56:18 2019
+type=PROCTITLE msg=audit(1552838178.751:190): proctitle="./myprog"
+type=PATH msg=audit(1552838178.751:190): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838178.751:190): cwd="/"
+type=SYSCALL msg=audit(1552838178.751:190): arch=c000003e syscall=90 success=no exit=-1 a0=5601369653e8 a1=124 a2=ffffffff a3=252 items=1 ppid=4226 pid=4227 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 15:59:27 2019
+type=PROCTITLE msg=audit(1552838367.741:191): proctitle="./myprog"
+type=PATH msg=audit(1552838367.741:191): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838367.741:191): cwd="/"
+type=SYSCALL msg=audit(1552838367.741:191): arch=c000003e syscall=90 success=no exit=-1 a0=55fe24a123f8 a1=124 a2=ffffffff a3=252 items=1 ppid=4276 pid=4278 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 16:01:35 2019
+type=PROCTITLE msg=audit(1552838495.577:192): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552838495.577:192): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838495.577:192): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552838495.577:192): arch=c000003e syscall=192 success=no exit=-61 a0=7ffc5c1ea700 a1=7fbe36326262 a2=55fe590b0bb0 a3=ff items=1 ppid=3723 pid=4367 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:01:35 2019
+type=PROCTITLE msg=audit(1552838495.577:193): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552838495.577:193): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838495.577:193): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552838495.577:193): arch=c000003e syscall=191 success=no exit=-61 a0=7ffc5c1ea700 a1=55fe58739af3 a2=0 a3=0 items=1 ppid=3723 pid=4367 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:03:34 2019
+type=PROCTITLE msg=audit(1552838614.937:196): proctitle=63686D6F6400343434002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874
+type=PATH msg=audit(1552838614.937:196): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838614.937:196): cwd="/"
+type=SYSCALL msg=audit(1552838614.937:196): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=55e21c4050f0 a2=124 a3=3c0 items=1 ppid=4447 pid=4448 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 16:03:49 2019
+type=PROCTITLE msg=audit(1552838629.480:198): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552838629.480:198): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838629.480:198): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552838629.480:198): arch=c000003e syscall=191 success=no exit=-61 a0=7ffcf31c8810 a1=56093316baf3 a2=0 a3=0 items=1 ppid=3723 pid=4450 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:03:49 2019
+type=PROCTITLE msg=audit(1552838629.480:197): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552838629.480:197): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552838629.480:197): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552838629.480:197): arch=c000003e syscall=192 success=no exit=-61 a0=7ffcf31c8810 a1=7f85ee06a262 a2=5609351b2bb0 a3=ff items=1 ppid=3723 pid=4450 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:24:09 2019
+type=PROCTITLE msg=audit(1552839849.217:205): proctitle="./myprog"
+type=PATH msg=audit(1552839849.217:205): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552839849.217:205): cwd="/"
+type=SYSCALL msg=audit(1552839849.217:205): arch=c000003e syscall=90 success=no exit=-1 a0=5641f4ffb350 a1=124 a2=ffffffff a3=252 items=1 ppid=4726 pid=4727 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 16:24:31 2019
+type=PROCTITLE msg=audit(1552839871.209:207): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552839871.209:207): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552839871.209:207): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552839871.209:207): arch=c000003e syscall=191 success=no exit=-61 a0=7ffe9c81c670 a1=559f57030af3 a2=0 a3=0 items=1 ppid=3723 pid=4730 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:24:31 2019
+type=PROCTITLE msg=audit(1552839871.209:206): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552839871.209:206): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552839871.209:206): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552839871.209:206): arch=c000003e syscall=192 success=no exit=-61 a0=7ffe9c81c670 a1=7f0345a03262 a2=559f57fd7bb0 a3=ff items=1 ppid=3723 pid=4730 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:25:11 2019
+type=PROCTITLE msg=audit(1552839911.581:208): proctitle="./myprog"
+type=PATH msg=audit(1552839911.581:208): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552839911.581:208): cwd="/"
+type=SYSCALL msg=audit(1552839911.581:208): arch=c000003e syscall=90 success=no exit=-1 a0=55c29d034350 a1=100 a2=ffffffff a3=252 items=1 ppid=4761 pid=4762 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 16:25:20 2019
+type=PROCTITLE msg=audit(1552839920.673:209): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552839920.673:209): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552839920.673:209): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552839920.673:209): arch=c000003e syscall=192 success=no exit=-61 a0=7ffee41e72c0 a1=7f9847590262 a2=5609ff182bb0 a3=ff items=1 ppid=3723 pid=4764 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:25:20 2019
+type=PROCTITLE msg=audit(1552839920.673:210): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552839920.673:210): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552839920.673:210): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552839920.673:210): arch=c000003e syscall=191 success=no exit=-61 a0=7ffee41e72c0 a1=5609fe911af3 a2=0 a3=0 items=1 ppid=3723 pid=4764 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:26:13 2019
+type=PROCTITLE msg=audit(1552839973.285:211): proctitle="./myprog"
+type=PATH msg=audit(1552839973.285:211): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552839973.285:211): cwd="/"
+type=SYSCALL msg=audit(1552839973.285:211): arch=c000003e syscall=90 success=no exit=-1 a0=55c5743752e0 a1=100 a2=ffffffff a3=252 items=1 ppid=4810 pid=4811 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 16:30:34 2019
+type=PROCTITLE msg=audit(1552840234.277:212): proctitle="./myprog"
+type=PATH msg=audit(1552840234.277:212): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840234.277:212): cwd="/"
+type=SYSCALL msg=audit(1552840234.277:212): arch=c000003e syscall=90 success=no exit=-1 a0=564c09c021c8 a1=100 a2=ffffffff a3=252 items=1 ppid=4865 pid=4866 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="myprog" exe="/home/fayez/Desktop/CA1/SystemSoftwareCA1/myprog" key=(null)
+----
+time->Sun Mar 17 16:32:45 2019
+type=PROCTITLE msg=audit(1552840365.665:214): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840365.665:214): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840365.665:214): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840365.665:214): arch=c000003e syscall=191 success=no exit=-61 a0=7fff3b95c850 a1=56079dc1caf3 a2=0 a3=0 items=1 ppid=3723 pid=4905 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:32:45 2019
+type=PROCTITLE msg=audit(1552840365.665:213): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840365.665:213): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840365.665:213): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840365.665:213): arch=c000003e syscall=192 success=no exit=-61 a0=7fff3b95c850 a1=7f1ecd21b262 a2=56079e4b1bb0 a3=ff items=1 ppid=3723 pid=4905 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:32:53 2019
+type=PROCTITLE msg=audit(1552840373.245:215): proctitle=63686D6F6400343434002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874
+type=PATH msg=audit(1552840373.245:215): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840373.245:215): cwd="/"
+type=SYSCALL msg=audit(1552840373.245:215): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=55b1e52150f0 a2=124 a3=3c0 items=1 ppid=4916 pid=4917 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 16:33:02 2019
+type=PROCTITLE msg=audit(1552840382.753:216): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840382.753:216): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840382.753:216): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840382.753:216): arch=c000003e syscall=192 success=no exit=-61 a0=7ffe61ce5180 a1=7f21cc853262 a2=55c3ea41ebb0 a3=ff items=1 ppid=3723 pid=4919 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:33:02 2019
+type=PROCTITLE msg=audit(1552840382.753:217): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840382.753:217): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840382.753:217): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840382.753:217): arch=c000003e syscall=191 success=no exit=-61 a0=7ffe61ce5180 a1=55c3e828eaf3 a2=0 a3=0 items=1 ppid=3723 pid=4919 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:34:37 2019
+type=PROCTITLE msg=audit(1552840477.961:218): proctitle=63686D6F6400303030002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874
+type=PATH msg=audit(1552840477.961:218): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840477.961:218): cwd="/"
+type=SYSCALL msg=audit(1552840477.961:218): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=55e87acfd0f0 a2=0 a3=3c0 items=1 ppid=4949 pid=4950 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 16:35:41 2019
+type=PROCTITLE msg=audit(1552840541.781:219): proctitle=63686D6F6400373737002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874
+type=PATH msg=audit(1552840541.781:219): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840541.781:219): cwd="/"
+type=SYSCALL msg=audit(1552840541.781:219): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=562d1928e0f0 a2=1ff a3=3c0 items=1 ppid=4989 pid=4990 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 16:35:47 2019
+type=PROCTITLE msg=audit(1552840547.765:221): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840547.765:221): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840547.765:221): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840547.765:221): arch=c000003e syscall=191 success=no exit=-61 a0=7ffeac85e090 a1=555b657ecaf3 a2=0 a3=0 items=1 ppid=3723 pid=4991 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:35:47 2019
+type=PROCTITLE msg=audit(1552840547.765:220): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840547.765:220): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840547.765:220): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840547.765:220): arch=c000003e syscall=192 success=no exit=-61 a0=7ffeac85e090 a1=7f7299df0262 a2=555b6771fbb0 a3=ff items=1 ppid=3723 pid=4991 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:36:58 2019
+type=PROCTITLE msg=audit(1552840618.977:224): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840618.977:224): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840618.977:224): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840618.977:224): arch=c000003e syscall=192 success=no exit=-61 a0=7ffc255ada00 a1=7fad1dbe4262 a2=5573b64acbb0 a3=ff items=1 ppid=3723 pid=5025 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:36:58 2019
+type=PROCTITLE msg=audit(1552840618.977:225): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840618.977:225): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840618.977:225): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840618.977:225): arch=c000003e syscall=191 success=no exit=-61 a0=7ffc255ada00 a1=5573b602baf3 a2=0 a3=0 items=1 ppid=3723 pid=5025 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:37:19 2019
+type=PROCTITLE msg=audit(1552840639.825:226): proctitle=63686D6F640034343400696E7472616E65742E747874
+type=PATH msg=audit(1552840639.825:226): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840639.825:226): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840639.825:226): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=55dac70d60f0 a2=124 a3=3c0 items=1 ppid=3723 pid=5036 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts3 ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 16:38:26 2019
+type=USER_CMD msg=audit(1552840706.193:229): pid=5037 uid=1000 auid=1000 ses=3 msg='cwd="/var/www/html/intranet" cmd=6E616E6F202F6574632F7375646F657273 terminal=pts/3 res=success'
+----
+time->Sun Mar 17 16:39:20 2019
+type=USER_CMD msg=audit(1552840760.629:234): pid=5042 uid=1000 auid=1000 ses=3 msg='cwd="/var/www/html/intranet" cmd=757365726D6F64202D6147207375646F20666179657A terminal=pts/3 res=success'
+----
+time->Sun Mar 17 16:40:42 2019
+type=PROCTITLE msg=audit(1552840842.777:249): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840842.777:249): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840842.777:249): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840842.777:249): arch=c000003e syscall=192 success=no exit=-61 a0=7ffe4c9cc980 a1=7f1b8ba37262 a2=55fb7ca03840 a3=ff items=1 ppid=5070 pid=5077 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:40:42 2019
+type=PROCTITLE msg=audit(1552840842.777:250): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552840842.777:250): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840842.777:250): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840842.777:250): arch=c000003e syscall=191 success=no exit=-61 a0=7ffe4c9cc980 a1=55fb7b034af3 a2=0 a3=0 items=1 ppid=5070 pid=5077 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 16:40:48 2019
+type=PROCTITLE msg=audit(1552840848.449:251): proctitle=63686D6F640037373700696E7472616E65742E747874
+type=PATH msg=audit(1552840848.449:251): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552840848.449:251): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552840848.449:251): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=5555e181c0f0 a2=1ff a3=3c0 items=1 ppid=5070 pid=5078 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 17:04:30 2019
+type=PROCTITLE msg=audit(1552842270.429:2546): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552842270.429:2546): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552842270.429:2546): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552842270.429:2546): arch=c000003e syscall=192 success=no exit=-61 a0=7fffafd9dd30 a1=7f311ced5262 a2=5591dd518bb0 a3=ff items=1 ppid=7206 pid=7211 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts1 ses=8 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 17:04:30 2019
+type=PROCTITLE msg=audit(1552842270.429:2547): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552842270.429:2547): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552842270.429:2547): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552842270.429:2547): arch=c000003e syscall=191 success=no exit=-61 a0=7fffafd9dd30 a1=5591dce67af3 a2=0 a3=0 items=1 ppid=7206 pid=7211 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts1 ses=8 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 17:04:38 2019
+type=PROCTITLE msg=audit(1552842278.017:2548): proctitle=63686D6F640037373700696E7472616E65742E747874
+type=PATH msg=audit(1552842278.017:2548): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552842278.017:2548): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552842278.017:2548): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=559deb35d0f0 a2=1ff a3=3c0 items=1 ppid=7206 pid=7213 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts1 ses=8 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 17:07:25 2019
+type=USER_CMD msg=audit(1552842445.193:2553): pid=7240 uid=1001 auid=1001 ses=8 msg='cwd="/var/www/html/intranet" cmd=63686D6F6420373737202F7661722F7777772F68746D6C2F terminal=pts/1 res=success'
+----
+time->Sun Mar 17 17:07:39 2019
+type=PROCTITLE msg=audit(1552842459.025:2558): proctitle=63686D6F640037373700696E7472616E65742E747874
+type=PATH msg=audit(1552842459.025:2558): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552842459.025:2558): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552842459.025:2558): arch=c000003e syscall=268 success=no exit=-1 a0=ffffffffffffff9c a1=5609ccd320f0 a2=1ff a3=3c0 items=1 ppid=7206 pid=7243 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts1 ses=8 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 17:08:47 2019
+type=USER_CMD msg=audit(1552842527.753:2559): pid=7259 uid=1001 auid=1001 ses=8 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/1 res=success'
+----
+time->Sun Mar 17 17:09:20 2019
+type=PROCTITLE msg=audit(1552842560.521:2569): proctitle=63686D6F6400343434002F7661722F7777772F68746D6C2F696E7472616E65742F696E7472616E65742E747874
+type=PATH msg=audit(1552842560.521:2569): item=0 name="/var/www/html/intranet/intranet.txt" inode=421297 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552842560.521:2569): cwd="/"
+type=SYSCALL msg=audit(1552842560.521:2569): arch=c000003e syscall=268 success=yes exit=0 a0=ffffffffffffff9c a1=555b2f7730f0 a2=124 a3=3c0 items=1 ppid=7284 pid=7285 auid=1001 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=8 comm="chmod" exe="/bin/chmod" key=(null)
+----
+time->Sun Mar 17 17:09:31 2019
+type=USER_CMD msg=audit(1552842571.277:2570): pid=7286 uid=1001 auid=1001 ses=8 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/1 res=success'
+----
+time->Sun Mar 17 17:09:35 2019
+type=PROCTITLE msg=audit(1552842575.981:2575): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552842575.981:2575): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100444 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552842575.981:2575): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552842575.981:2575): arch=c000003e syscall=192 success=no exit=-61 a0=7fffc6dabf30 a1=7f325006b262 a2=560800d72bb0 a3=ff items=1 ppid=7206 pid=7288 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts1 ses=8 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 17:09:35 2019
+type=PROCTITLE msg=audit(1552842575.981:2576): proctitle=6C73002D2D636F6C6F723D6175746F002D6C
+type=PATH msg=audit(1552842575.981:2576): item=0 name="intranet.txt" inode=421297 dev=08:01 mode=0100444 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+type=CWD msg=audit(1552842575.981:2576): cwd="/var/www/html/intranet"
+type=SYSCALL msg=audit(1552842575.981:2576): arch=c000003e syscall=191 success=no exit=-61 a0=7fffc6dabf30 a1=5607ff5f8af3 a2=0 a3=0 items=1 ppid=7206 pid=7288 auid=1001 uid=1001 gid=1001 euid=1001 suid=1001 fsuid=1001 egid=1001 sgid=1001 fsgid=1001 tty=pts1 ses=8 comm="ls" exe="/bin/ls" key=(null)
+----
+time->Sun Mar 17 17:11:33 2019
+type=USER_CMD msg=audit(1552842693.481:2577): pid=7308 uid=1001 auid=1001 ses=8 msg='cwd="/var/www/html/intranet" cmd=6E616E6F202F6574632F7375646F657273 terminal=pts/1 res=success'
+----
+time->Sun Mar 17 17:12:29 2019
+type=USER_CMD msg=audit(1552842749.917:2582): pid=7315 uid=1001 auid=1001 ses=8 msg='cwd="/var/www/html/intranet" cmd="reboot" terminal=pts/1 res=success'
+----
+time->Sun Mar 17 17:14:38 2019
+type=USER_CMD msg=audit(1552842878.990:79): pid=1593 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=63686D6F642037353520696E7472616E65742E747874 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:16:06 2019
+type=USER_CMD msg=audit(1552842966.029:91): pid=1647 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:22:13 2019
+type=USER_CMD msg=audit(1552843333.549:102): pid=1710 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=63686D6F642037353520696E7472616E65742E747874 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:29:31 2019
+type=USER_CMD msg=audit(1552843771.736:114): pid=1869 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:29:55 2019
+type=USER_CMD msg=audit(1552843795.668:124): pid=1889 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:37:22 2019
+type=USER_CMD msg=audit(1552844242.631:131): pid=1988 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6E616E6F20696E7472616E65742E747874 terminal=pts/2 res=success'
+----
+time->Sun Mar 17 17:38:18 2019
+type=USER_CMD msg=audit(1552844298.607:136): pid=2005 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:38:56 2019
+type=USER_CMD msg=audit(1552844336.915:146): pid=2048 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:49:06 2019
+type=USER_CMD msg=audit(1552844946.215:167): pid=2143 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:51:07 2019
+type=USER_CMD msg=audit(1552845067.456:182): pid=2179 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'
+----
+time->Sun Mar 17 17:54:08 2019
+type=USER_CMD msg=audit(1552845248.230:197): pid=2224 uid=1001 auid=1001 ses=3 msg='cwd="/var/www/html/intranet" cmd=6B696C6C616C6C206D7970726F67 terminal=pts/0 res=success'

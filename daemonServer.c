@@ -14,7 +14,13 @@ bool backedUp = false;
 void RunDaemonServer()
 {
     //Create a child process
-    int pid = fork();
+    int pid;
+
+    if((pid = fork()) == -1)
+    {
+        perror("Error init Fork 1");
+        exit(EXIT_FAILURE);
+    }
 
     if(pid > 0)
     {
@@ -98,7 +104,20 @@ int main (int argc, char *argv[] )
         int systemHour = myTime->tm_hour;
         int systemMinute = myTime->tm_min;
 
-
+        while(backedUp == false)
+        {
+            if(systemHour == 18 )
+            {
+            
+                backedUp = true;
+                //syslog(LOG_INFO,"Calling Function to create log files for today..");
+                //runLogfilesForToday(); 
+                syslog(LOG_INFO,"Calling function to create backup...");
+                BackUp();
+            
+            } 
+        }
+        /*
         // THis if statement checks if time is midnight, if it is, it will call the BACKUP function which will fork a backup Process and copy files over
         if(systemHour == 18  && backedUp == false)
         {
@@ -115,7 +134,7 @@ int main (int argc, char *argv[] )
             backedUp = false;
             syslog(LOG_INFO,"I FNISHED BACKING UP!!"); // why doesn't it log ?
             
-        }
+        }*/
 
              
             

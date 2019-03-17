@@ -17,10 +17,18 @@ void runLogfilesForToday()
     int fd[2],des,nbytes,target,pid;
 
     // create the pipe
-    pipe(fd);
+    if(pipe(fd) == -1)
+    {
+        perror("Error init Fork 1");
+        exit(EXIT_FAILURE);
+    }
 
     // create a child process 
-    pid = fork();
+    if((pid = fork()) == -1)
+    {
+        perror("Error init Fork 1");
+        exit(EXIT_FAILURE);
+    }
 
     if(pid > 0) // this is the parent
     {

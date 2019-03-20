@@ -1,0 +1,41 @@
+#! /bin/sh
+# /etc/init.d/blah
+#
+
+### BEGIN INIT INFO
+# Provides:          fayezscript
+# Required-Start:    $local_fs $network $named $time $syslog
+# Required-Stop:     $local_fs $network $named $time $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Description:       init script to launch on bootup
+### END INIT INFO
+
+if [ -s /home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/daemonPID.txt ] 
+then 
+	echo "CANT START NEW DAEMON FACK OFF!"; 
+else 
+	echo "I can make a daemon "; 
+	./home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/myprog
+fi
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "start script test"
+    ;;
+  stop)
+    echo "Stopping daemon"
+    killall myprog
+    ;;
+  backup)
+    echo "Forcing backup"
+    ./home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/myprog backup
+    ;;
+  *)
+    echo "Usage: /etc/init.d/blah {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

@@ -74,6 +74,7 @@ void RunDaemonServer()
 
 int main (int argc, char *argv[] )
 {
+    /*
     // this here checks if ./myprog stop is passed and it kills the daemon running
     if(argc >1)
     {
@@ -83,13 +84,11 @@ int main (int argc, char *argv[] )
         {
             syslog(LOG_INFO,"Stopping dameon");
 
-            system("sudo echo "" > daemonPID.txt"); // clear the PID from the file 
-
-            int checker = system("sudo killall myprog"); // the -u operator only copies changed content in the file
-            if(checker ==! -1)
+            if(truncate("/home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/daemonPID.txt",0) == -1)
             {
-                exit(0);
+                syslog(LOG_INFO,"Could not clear file..");
             }
+
         }
 
         if(strcmp(argumentPassed,"force") == 0)
@@ -100,17 +99,17 @@ int main (int argc, char *argv[] )
 
             exit(0);            
         }
-
+        /*
         if(strcmp(argumentPassed,"start") == 0)
         {
             FILE *fp;
             fp = fopen("/home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/daemonPID.txt","r");
 
-            fseek (fp, 0, SEEK_SET);
+            fseek (fp, 0, SEEK_END);
             
-            if (ftell(fp) == 0)
+            if (!ftell(fp) == 0)
             {
-                //file empty
+                //file is not empty, so we cant run a new instance
                 syslog(LOG_INFO,"FACK OFF!");
             }
             else
@@ -156,8 +155,23 @@ int main (int argc, char *argv[] )
 
                 return 0;
             }
+        }
+    }*/ // end argc iff
                  
-    /*
+    
+    if(argc >1)
+    {
+        char argumentPassed[100];
+        strcpy(argumentPassed,argv[1]);
+        if(strcmp(argumentPassed,"backup") == 0)
+        {
+            syslog(LOG_INFO,"Forcing backup..");
+
+            BackUp();
+
+            exit(0);            
+        }
+    }
     // calling daemon Server to start
     RunDaemonServer();
 
@@ -182,7 +196,7 @@ int main (int argc, char *argv[] )
 
         while(backedUp == false)
         {
-            if(systemHour == 14 )
+            if(systemHour == 19 )
             {
             
                 backedUp = true;
@@ -199,6 +213,6 @@ int main (int argc, char *argv[] )
     closelog();
 
     return 0;
-    */
+    
     
 }

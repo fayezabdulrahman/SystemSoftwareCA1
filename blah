@@ -11,29 +11,43 @@
 # Description:       init script to launch on bootup
 ### END INIT INFO
 
-if [ -s /home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/daemonPID.txt ] 
-then 
-	echo "CANT START NEW DAEMON FACK OFF!"; 
-else 
-	echo "I can make a daemon "; 
-	./home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/myprog
-fi
+
+checkIfDaemonExists()
+{
+  if [ -f /tmp/daemonPID.txt ]
+  then
+    echo "I can't start new Daemon, one already running"
+    #1 = non zero means failure
+    return 1
+  else
+    echo "I can create a new daemon"
+    #0 = no failure (basically true)
+    return 0
+  fi
+}
+
 
 # Carry out specific functions when asked to by the system
 case "$1" in
   start)
-    echo "start script test"
+    if checkIfDaemonExists; 
+      then
+        ./home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/myprog
+      else
+        echo "I can't start new Daemon, one already running"
+    fi
     ;;
   stop)
     echo "Stopping daemon"
     killall myprog
+    rm /tmp/daemonPID.txt
     ;;
   backup)
     echo "Forcing backup"
     ./home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/myprog backup
     ;;
   *)
-    echo "Usage: /etc/init.d/blah {start|stop}"
+    echo "Usage: /etc/init.d/blah {start|stop|backup}"
     exit 1
     ;;
 esac

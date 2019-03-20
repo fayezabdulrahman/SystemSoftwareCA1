@@ -32,7 +32,7 @@ void RunDaemonServer()
     else if(pid == 0)
     {
         FILE *somefile;
-        somefile = fopen("/home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/daemonPID.txt","w");
+        somefile = fopen("/tmp/daemonPID.txt","w");
         //text
         fprintf(somefile, "%d", getpid());
 
@@ -75,89 +75,8 @@ void RunDaemonServer()
 int main (int argc, char *argv[] )
 {
     /*
-    // this here checks if ./myprog stop is passed and it kills the daemon running
-    if(argc >1)
-    {
-        char argumentPassed[100];
-        strcpy(argumentPassed,argv[1]);
-        if(strcmp(argumentPassed,"stop") == 0)
-        {
-            syslog(LOG_INFO,"Stopping dameon");
-
-            if(truncate("/home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/daemonPID.txt",0) == -1)
-            {
-                syslog(LOG_INFO,"Could not clear file..");
-            }
-
-        }
-
-        if(strcmp(argumentPassed,"force") == 0)
-        {
-            syslog(LOG_INFO,"Forcing backup..");
-
-            BackUp();
-
-            exit(0);            
-        }
-        /*
-        if(strcmp(argumentPassed,"start") == 0)
-        {
-            FILE *fp;
-            fp = fopen("/home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/daemonPID.txt","r");
-
-            fseek (fp, 0, SEEK_END);
-            
-            if (!ftell(fp) == 0)
-            {
-                //file is not empty, so we cant run a new instance
-                syslog(LOG_INFO,"FACK OFF!");
-            }
-            else
-            {
-                syslog(LOG_INFO,"I can run a new instance.......");
-                // calling daemon Server to start
-                RunDaemonServer();
-
-                while (1) // THis while loop to keep DAEMON Server running after its been called 
-                {
-                    //INSERT DAEMON CODE HERE
-                    sleep(2);
-                    syslog(LOG_INFO,"Inside Daemon Server");
-
-                    // create currentTIme variable
-                    time_t currentTime;
-                    time(&currentTime);
-
-                    // add it to tm strucutre that gets local time
-                    struct tm *myTime = localtime(&currentTime);
-                    
-                    // get system time and assign it to variable
-                    int systemHour = myTime->tm_hour;
-                    int systemMinute = myTime->tm_min;
-
-                    while(backedUp == false)
-                    {
-                        if(systemHour == 14 )
-                        {
-                        
-                            backedUp = true;
-                            //syslog(LOG_INFO,"Calling Function to create log files for today..");
-                            runLogfilesForToday(); 
-                            syslog(LOG_INFO,"Calling function to create backup...");
-                            BackUp();
-                        
-                        } 
-                    }          
-                } // Daemon loop!
-                    
-                syslog (LOG_NOTICE, "First daemon terminated.");
-                closelog();
-
-                return 0;
-            }
-        }
-    }*/ // end argc iff
-                 
+    If an argument is passed we check if its backup, and then we can force back up
+    */
     
     if(argc >1)
     {
@@ -172,10 +91,12 @@ int main (int argc, char *argv[] )
             exit(0);            
         }
     }
+
+    // if no argument is passed, just run the daemon server, because our init script
+    // already checks if there is an instance running of the file. 
+
     // calling daemon Server to start
     RunDaemonServer();
-
-    
 
     while (1) // THis while loop to keep DAEMON Server running after its been called 
     {

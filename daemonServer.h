@@ -5,6 +5,6 @@ void RunDaemonServer();
 void BackUp();
 void UnLockFile();
 int LockIt();
-void runLogfilesForToday();
+void TransferFiles();
 
 #endif // Ending DAEMONSERVER_H_

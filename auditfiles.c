@@ -49,6 +49,7 @@ void runLogfilesForToday()
         syslog(LOG_INFO,"Inside AuditLog Process");
         //int returnedResult = runLogs();
         syslog(LOG_INFO,"CALLING CREAT AUDITt");
+        // call function run logs which returns a result of -1 if fails
         result = runLogs();
 
         if(result == -1)
@@ -64,10 +65,10 @@ void runLogfilesForToday()
     }
 }
 
-
+// function that will pipe our audit.d files to 
 int runLogs()
 {
-    int checker = system("sudo ausearch -f /var/www/html/ > /home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/auditdddlog.txt");
+    int checker = system("sudo ausearch -f /var/www/html/ > /var/www/html/auditdddlog.txt");
 
     return checker;
 }

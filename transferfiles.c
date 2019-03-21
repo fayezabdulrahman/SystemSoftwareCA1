@@ -9,10 +9,8 @@
 #include "daemonServer.h"
 
 
-// define functions
-int actuallyBackingUp();
-
-void BackUp()
+int transferFilesToLive();
+void TransferFiles()
 {
     
     int result;
@@ -46,56 +44,49 @@ void BackUp()
     }
     else
     {
-        syslog(LOG_INFO,"Inside Backup Process");
-
-        // Take no input, close fd[0] (READ)
-        close(fd[0]);
         int ReturnedLockValue = LockIt(); // locking file before backing up
         if(ReturnedLockValue == -1)
         {
             syslog(LOG_INFO,"Locking Failed");
         }
+        syslog(LOG_INFO,"Inside Transfer Process");
+
+        // Take no input, close fd[0] (READ)
+        close(fd[0]);
+        syslog(LOG_INFO,"Calling function to transfer files");
+
+        int ReturnedTransferValue = transferFilesToLive();
+
+        if(ReturnedTransferValue == -1)
+        {
+            UnLockFile(); // unlock file incase it fails
+            char message[] = "Transfer FAILED Refer to logs";
+            write(fd[1],message, (strlen(message)+1));
+
+        }
         else
         {
-            syslog(LOG_INFO,"Locking Successful");
-            syslog(LOG_INFO,"Calling function to actually backup");
-
-            int ReturnedBackupValue = actuallyBackingUp();
-
-            if(ReturnedBackupValue == -1)
-            {
-                UnLockFile(); // unlock file incase it fails
-                char message[] = "Backup FAILED Refer to logs";
-                write(fd[1],message, (strlen(message)+1));
-                
-            }
-            else
-            {
-                UnLockFile(); // unlock file when everything works
-                char message[] = "Backup Successfully completed";
-                write(fd[1],message, (strlen(message)+1));
-            }
+            UnLockFile(); // unlock file when everything works
+            char message[] = "Transfer fully successful";
+            write(fd[1],message, (strlen(message)+1));
         }
-
     }
 }
 
-
-int actuallyBackingUp()
+int transferFilesToLive()
 {
-    syslog(LOG_INFO, "INSIDE ACTUALLYBACKINGUP");
-
-    int checker = system("cp -a -u /var/www/html/intranet/. /var/www/html/intranetBackup/"); // the -u operator only copies changed content in the file 
+    syslog(LOG_INFO, "INSIDE TRANSFER FILES !!");
+    int checker = system("cp -a -u /var/www/html/intranet/. /var/www/html/live"); // the -u operator only copies changed content in the file 
     return checker;
-
 }
 
+/*
 int LockIt()
 {
     syslog(LOG_INFO, "LOCKING FILE Before backing up!");
     // change file perimissions to read for user, read for group, read for others, no one allowed to write to it
     //chmod(LIVE,S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
-    int result = system("chmod 444 /var/www/html/intranet");
+    int result = system("chmod 444 /var/www/html/intranet"); // the -u operator only copies changed content in the file 
 
     return result;
 
@@ -106,6 +97,6 @@ void UnLockFile()
     syslog(LOG_INFO, "Unlocking FILE After backing/transfer up!");
     // change file perimissions to read write execute for user read for group, read for others
     //chmod(LIVE,S_IRWXU|S_IWUSR|S_IRGRP|S_IROTH);
-    system("chmod 755 /var/www/html/intranet"); 
-    system("chmod 700 /var/www/html/intranetBackup");
+    system("chmod 775 /var/www/html/intranet"); // the -u operator only copies changed content in the file 
 }
+*/

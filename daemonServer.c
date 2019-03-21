@@ -26,7 +26,7 @@ void RunDaemonServer()
     {
         // this is the parent
         // this will perform a printf and finish
-        printf("Parent Process Terminating\n");
+        printf("Daemon Server Initiated...\n");
         exit(EXIT_SUCCESS); // KILL THE parent
     }
     else if(pid == 0)
@@ -117,13 +117,15 @@ int main (int argc, char *argv[] )
 
         while(backedUp == false)
         {
-            if(systemHour == 19 )
+            if(systemHour == 23 ) // essentially it would be if systemHour == MIDNIGHT
             {
             
-                backedUp = true;
-                //syslog(LOG_INFO,"Calling Function to create log files for today..");
-                runLogfilesForToday(); 
+                backedUp = true; // set backup to true so we don't get stuck in a loop
+                
+                //  call the Tranferfiles() function which will call our audifiles.c program
+                TransferFiles(); 
                 syslog(LOG_INFO,"Calling function to create backup...");
+                // call the BackUp function inside BackUp.c program which will lock files, and back up and transfer
                 BackUp();
             
             } 

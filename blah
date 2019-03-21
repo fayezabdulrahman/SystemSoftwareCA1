@@ -11,7 +11,8 @@
 # Description:       init script to launch on bootup
 ### END INIT INFO
 
-
+# Run at boot time
+# init script initilaises start flag straight away so it will come to this function and check.
 checkIfDaemonExists()
 {
   if [ -f /tmp/daemonPID.txt ]

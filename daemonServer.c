@@ -90,6 +90,14 @@ int main (int argc, char *argv[] )
 
             exit(0);            
         }
+        if(strcmp(argumentPassed,"transfer") == 0)
+        {
+            syslog(LOG_INFO,"Forcing transfer..");
+
+            TransferFiles(); 
+
+            exit(0);   
+        }
     }
 
     // if no argument is passed, just run the daemon server, because our init script

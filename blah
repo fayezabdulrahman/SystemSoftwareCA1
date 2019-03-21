@@ -47,6 +47,10 @@ case "$1" in
     echo "Forcing backup"
     ./home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/myprog backup
     ;;
+  transfer)
+    echo "Forcing transfer"
+    ./home/fayezrahman/Desktop/CA1/SystemSoftwareCA1/myprog transfer
+    ;;
   *)
     echo "Usage: /etc/init.d/blah {start|stop|backup}"
     exit 1
